@@ -43,7 +43,7 @@
 	url = git@github.com:opennetworklinux/onlp-dell
 [submodule "submodules/onlp-wnc"]
 	path = submodules/onlp-wnc
-	url = git@github.com:opennetworklinux/onlp-wnc
+	url = https://github.com/opennetworklinux/onlp-wnc
 [submodule "submodules/ofdpa-2.0"]
 	path = submodules/ofdpa-2.0
 	url = git://github.com/opennetworklinux/ofdpa-2.0
