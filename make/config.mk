@@ -66,6 +66,11 @@ ONL_SUBMODULE_ONLP_QUANTA      := $(ONL)/submodules/onlp-quanta
 ONL_LOCAL_SUBMODULES += onlp-quanta
 endif
 
+ifndef ONL_SUBMODULE_ONLP_WNC
+ONL_SUBMODULE_ONLP_WNC      := $(ONL)/submodules/onlp-wnc
+ONL_LOCAL_SUBMODULES += onlp-wnc
+endif
+
 ifndef ONL_SUBMODULE_LINUX_3_9_6
 ONL_SUBMODULE_LINUX_3_9_6      := $(ONL)/submodules/linux-3.9.6
 ONL_LOCAL_SUBMODULES += linux-3.9.6
@@ -187,7 +192,7 @@ endif
 # This turns out to  be terribly hacky wrt the component makefiles.
 # This should be a temporary solution.
 #
-ALL_SUBMODULES = INFRA COMMON BIGCODE ONLP ONLP_ACCTON ONLP_DNI ONLP_QUANTA ONLP_DELL INDIGO OFDPA_20 OFDPA_20_CLOSED LOXIGEN_ARTIFACTS
+ALL_SUBMODULES = INFRA COMMON BIGCODE ONLP ONLP_ACCTON ONLP_DNI ONLP_QUANTA ONLP_DELL ONLP_WNC INDIGO OFDPA_20 OFDPA_20_CLOSED LOXIGEN_ARTIFACTS
 MODULE_DIRS := $(foreach submodule,$(ALL_SUBMODULES),$(ONL_SUBMODULE_$(submodule))/modules)
 MODULE_DIRS_TOUCH := $(foreach sd,$(MODULE_DIRS),$(shell mkdir -p $(sd) && touch $(sd)/Manifest.mk))
 
