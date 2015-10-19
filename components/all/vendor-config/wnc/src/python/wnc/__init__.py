@@ -27,7 +27,7 @@ from onl.platform.base import OpenNetworkPlatformBase, sysinfo
 import struct
 import time
 
-class OpenNetworkPlatformWNC(OpenNetworkPlatformBase):
+class OpenNetworkPlatformWnc(OpenNetworkPlatformBase):
 
     def manufacturer(self):
         return "WNC"
